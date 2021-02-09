@@ -1,43 +1,42 @@
+let words = ["Aeroplane","Vampire","Craft", "Parfum","Force","Port","Bubble"] // my words hidden list
+let secretWord = randomWord() // helped by Loïc
+    console.log(secretWord)
+let split = secretWord.split(""); // idem: to split each word by letters
+    console.log(words)
+let splitLengt = split.length // idem: to split each words from my arr 
+    console.log(split)
 
+/************************************************************************/
 
-let maxLivesLeft = 7; // max lives that I gave
- 
+let maxLivesLeft = 7; // max lives that I want to give
 let failure = 0; // how many failure shout I wrote? Do I need to write? Is that necessary? Maybe I need to start to Zero 
 
+
+let newArrWordsToFind = []; // new arr enter words to find from the initial arr "words"
+const keyboard = document.querySelector(".keyboard");// selection buttons from HTML. This part helped by Laurent
+const buttonlist = keyboard.querySelectorAll("class");// idem
+console.log(buttonlist);
 
 
 function randomWord() { //How will be insert in ?? Don't know what I was trying to say !!!
     answerWord = words[Math.floor(Math.random() * words.length)];
     return answerWord  //To found one of the words 
 }
-let needToFind = []; // new arr enter words
 
-//const alphabet = document.querySelector(".alphabet"); // selection buttons from HTML. This part helped by Laurent
-//const listLi = alphabet.querySelectorAll("li");
+buttonlist.forEach(element => {
+  
 
-let words = ["Aeroplane","Vampire","Craft", "Parfum","Force","Port","Bubble"] // my words hidden list
-let secretWord = randomWord()
-let split = secretWord.split("");
-let splitLengt = split.length
+    });
+})
 
 
 
-console.log(secretWord)
-console.log(words)
-console.log(split)
+  
+    /*button.addEventListener("click", ()=>{
+        console.log("test");*/
 
-/*listLi.forEach(e => {
-    e.addEventListener("click", ()=>{
-
-        if(split.includes(e.innerHTML.toLowerCase())){
-            
-
-
+       /* if(split.includes(button.innerHTML.toLowerCase())){ // Helped by laurent
+            document.getElementByClass("class") ="visibility";
         }else{
-            
-
-
-        }
-        
-    })
-})*/
+            document.getElementByClass("class") = "hidden";
+        }*/

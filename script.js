@@ -1,43 +1,71 @@
-let words = ["Aeroplane","Vampire","Craft", "Parfum","Force","Port","Bubble"] // my words hidden list
-let hiddenWord = randomWord() // helped by Loïc
-    console.log(hiddenWord)
-let split = hiddenWord.split(""); // idem: to split each word by letters
-    console.log(words)
-let splitLengt = split.length // idem: to split each words from my arr 
-    console.log(split)
+let words = [
+"AEROPLANE",
+"VAMPIRE",
+"CRAFT", 
+"PARFUM",
+"FORCE",
+"PORT",
+"BUBBLE"]; 
 
 /************************************************************************/
 
-let maxLivesLeft = 7; // max lives that I want to give
-let failure = 0; // how many failure shout I wrote? Do I need to write? Is that necessary? Maybe I need to start to Zero 
+//let wordToFind = words[Math.floor(Math.random() * words.length)]
 
-
-let newArrWordsToFind = []; // new arr enter words to find from the initial arr "words"
-const keyboard = document.querySelector(".keyboard");// selection buttons from HTML. This part helped by Laurent
-const buttonlist = keyboard.querySelectorAll("class");// idem
-console.log(buttonlist);
-
-
-function randomWord() { //How will be insert in ?? Don't know what I was trying to say !!!
+function randomWord() { 
     answerWord = words[Math.floor(Math.random() * words.length)];
-    return answerWord  //To found one of the words 
-}
+    return answerWord 
+} //fonction qui va chercher le mot dans le tableau appelé par la variable hiddenword
 
+//let answerArray = [];
 
-buttonlist.forEach(button => {
-    button.addEventListener("click", ()=>{
-        console.log("test");
+    let answerArr = 0; //compteur des erreurs
 
-   if (split.includes(button.innerHTML.toLowerCase())){ // Helped by laurent
-        .push("");
-    } else {
-        ("_")
+    let hiddenWord = "";// mot a chercher de la fonction en-dessous
+    
+    let x = "";
+
+function reset() {
+    answerArr = 0; //compteur des erreurs
+
+    hiddenWord = randomWord();// mot a chercher de la fonction en-dessous
+    console.log(hiddenWord);
+
+    x = hiddenWord.split(""); //divise mon mot à chercher dan smon tableau 
+    console.log(x);
+    
+    for (let i = 0; i < x.length; i++) {
+    document.getElementById("seeLetter").innerHTML += "_"//pour afficher la longueur du mot caché
         
     }
+}; 
 
-    });
-});
+function check () {
+    let guessLetter = document.getElementById("showLetter").value;//affiche un message sur le click du "restart"
+    console.log(guessLetter);
+    newLetter = x.indexOf(guessLetter);//verifie si la lettre se trouve dans le mot
+    console.log(newLetter);
+
+    if(x.indexOf(guessLetter) != -1) {
+        
+    } else {
+        answerArr++;
+        document.getElementById("wrongLetter").innerHTML += newLetter;
+        console.log(answerArr);
+    }
+};
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+/*const keyboard = document.querySelector(".keyboard");
+const buttonlist = keyboard.querySelectorAll(".letter");
+console.log(buttonlist);*/

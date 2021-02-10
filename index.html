@@ -19,41 +19,42 @@
     <div class = "float-right">Number of failure: <span id='failure'>0</span> of 7 <span id= 'maxLivesLeft'></span></div>
     <div class= "text-center">
 
-        <p>Guess the list of Words:</p>
-        <p id="insertWords"> Find the words there</p>
-       
-        <div class="keyboard">
+       <p><input id="seeLetter">     
+            <input id="wrongLetter">
+                <input id="showLetter"><input type="button" onClick="check()" value ="check"></p>
 
-                <button type="button" class="A">A</button>
-                <button type="button" class="B">B</button>
-                <button type="button" class="C">C</button>
-                <button type="button" class="D">D</button>
-                <button type="button" class="E">E</button>
+        <div class="keyboard"> 
+            
+                <button type="button" class="Letter">A</button>
+                <button type="button" class="Letter">B</button>
+                <button type="button" class="Letter">C</button>
+                <button type="button" class="Letter">D</button>
+                <button type="button" class="Letter">E</button>
 
-                <button type="button" class="F">F</button>
-                <button type="button" class="G">G</button>
-                <button type="button" class="H">H</button>
-                <button type="button" class="I">I</button>
-                <button type="button" class="J">J</button>
+                <button type="button" class="Letter">F</button>
+                <button type="button" class="Letter">G</button>
+                <button type="button" class="Letter">H</button>
+                <button type="button" class="Letter">I</button>
+                <button type="button" class="Letter">J</button>
 
-                <button type="button" class="K">K</button>
-                <button type="button" class="L">L</button>
-                <button type="button" class="M">M</button>
-                <button type="button" class="N">N</button>
-                <button type="button" class="O">O</button>
+                <button type="button" class="Letter">K</button>
+                <button type="button" class="Letter">L</button>
+                <button type="button" class="Letter">M</button>
+                <button type="button" class="Letter">N</button>
+                <button type="button" class="Letter">O</button>
 
-                <button type="button" class="P">P</button>
-                <button type="button" class="Q">Q</button>
-                <button type="button" class="R">R</button>
-                <button type="button" class="S">S</button>
-                <button type="button" class="T">T</button>
+                <button type="button" class="Letter">P</button>
+                <button type="button" class="Letter">Q</button>
+                <button type="button" class="Letter">R</button>
+                <button type="button" class="Letter">S</button>
+                <button type="button" class="Letter">T</button>
 
-                <button type="button" class="U">U</button>
-                <button type="button" class="V">V</button>
-                <button type="button" class="W">W</button>
-                <button type="button" class="X">X</button>
-                <button type="button" class="Y">Y</button>
-                <button type="button" class="Z">Z</button>            
+                <button type="button" class="Letter">U</button>
+                <button type="button" class="Letter">V</button>
+                <button type="button" class="Letter">W</button>
+                <button type="button" class="Letter">X</button>
+                <button type="button" class="Letter">Y</button>
+                <button type="button" class="Letter">Z</button>            
         </div>
         <button id="button" onClick="reset()">Restart</button> 
     </div>

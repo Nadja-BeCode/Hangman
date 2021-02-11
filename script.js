@@ -41,10 +41,10 @@ function reset() {
     document.getElementById("failure").innerHTML = answerArr;//pour remettre le compte à zero
 
     hiddenWord = randomWord();// mot a chercher de la fonction en-dessous
-    //console.log(hiddenWord);
+    console.log(hiddenWord);
 
     x = hiddenWord.split(""); //divise mon mot à chercher dans mon tableau 
-    //console.log(x);
+    console.log(x);
     
     //document.getElementById("seeLetter").innerHTML = "";
     for (let i = 0; i < x.length; i++) {
@@ -59,16 +59,16 @@ function check () {
 
     let guessLetter = document.getElementById("showLetter").value;//affiche un message sur le click du "restart"
     guessLetter = guessLetter.toUpperCase();//pour prendre en compte les lettres en majuscule
-    //console.log(guessLetter);
+    console.log(guessLetter);
 
     if(allEnterLetters.indexOf(guessLetter) != -1) {
         alert("Already enter !");
     } else {
         allEnterLetters.push(guessLetter);
-        //console.log(allEnterLetters);
+        console.log(allEnterLetters);
 
         newLetter = x.indexOf(guessLetter);//verifie si la lettre se trouve dans le mot
-        //console.log(newLetter);
+        console.log(newLetter);
 
         if(x.indexOf(guessLetter, position) != -1) {
             console.log(goodAnswer);

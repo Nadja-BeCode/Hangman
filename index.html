@@ -9,19 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
 </head>
-<body>
+<body> <!--en ajoutant le onLoad dans le "body (body onLoad =) permet d'afficher le 1er mot du jeu = "reset()"-->
     <div class = "container">
 
-        <h1 class = "text-center"> HANGMAN </h1>
-
+        <h1 class = "text-center">WELCOME TO HANGMANLAND</h1>
+        
     <div class = "float-right">Number of failure: <span id='failure'>0</span> of 7 <span id= 'maxLivesLeft'></span></div>
     <div class= "text-center">
 
-       <p><input id="seeLetter">     
-            <input id="wrongLetter">
-                <input id="showLetter"><input type="button" onClick="check()" value ="check"></p>
+       <p id="seeLetter"></p>   
+            <p id="wrongLetter"></p>
+                <p><input id="showLetter"><input type="button" onClick="check()" value ="check"></p>
 
         <div class="keyboard"> 
             
@@ -56,8 +55,16 @@
                 <button type="button" class="Letter">Y</button>
                 <button type="button" class="Letter">Z</button>            
         </div>
-        <button id="button" onClick="reset()">Restart</button> 
     </div>
+    </div>
+
+        <section>
+    <img src="img/bis.png" alt="Funfair picture" width="500" height="441"></img><br>
+        </section>
+
+     <div>   
+        <button id="button" onClick="reset()">Start</button>
+        
     </div>
     <script src="./script.js"></script>
 </body>

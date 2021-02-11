@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+body {
+text-align: center;
+font-family:'rye', cursive;
+background: black;
+
+}
+
+h1 {
+font-size: 55px;
+text-decoration:overline;
+letter-spacing: 2px;
+}
+
+.Letter {
+font-family: 'Rye', cursive;
+font-size: 30px ;
+
+}
+
+.button {
+    border: brown;
+    border-style: solid 12px;
+    border-radius: 25px;
+}
